@@ -4,7 +4,7 @@ import time
 print("\nWelcome to MASTERMIND!\n")
 time.sleep(0.5)
 print(
-    "I will select four coloured pegs from the following colours:\n(R)ed, (O)range, (Y)ellow, (G)reen, (B)lue, (P)urple\n")
+        "I will select four coloured pegs from the following colours:\n(R)ed, (O)range, (Y)ellow, (G)reen, (B)lue, (P)urple\n")
 time.sleep(1)
 print("Note that I am allowed to pick more than one of any colour.")
 time.sleep(1)
@@ -93,19 +93,15 @@ while playing is True:
 
         if tmpChoice[0] in tmpPegs:
             white += 1
-            tmpPegs = tmpPegs[:0] + "9" + tmpPegs[1:]
             tmpChoice = tmpChoice[:0] + "!" + tmpChoice[1:]
         if tmpChoice[1] in tmpPegs:
             white += 1
-            tmpPegs = tmpPegs[:1] + "@" + tmpPegs[2:]
             tmpChoice = tmpChoice[:1] + "#" + tmpChoice[2:]
         if tmpChoice[2] in tmpPegs:
             white += 1
-            tmpPegs = tmpPegs[:2] + "$" + tmpPegs[3:]
             tmpChoice = tmpChoice[:2] + "%" + tmpChoice[3:]
         if tmpChoice[3] in tmpPegs:
             white += 1
-            tmpPegs = tmpPegs[:3] + "^" + tmpPegs[4:]
             tmpChoice = tmpChoice[:3] + "&" + tmpChoice[4:]
 
         print(choice + " = " + ("Black " * black) + ("White " * white))
